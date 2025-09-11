@@ -1,0 +1,55 @@
+h1{
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    color: rgb(130, 44, 152);
+
+}
+
+h2{
+    font-size: 30px;
+    margin: 7px 0 20px 7px;
+    padding: 0;
+    color:mediumorchid;
+}
+
+h3{
+    color: cornflowerblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 7px;
+    padding: 20px 0 0 0;
+    font-size: 25px;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:7px;
+    padding: 0px 0 7px 0;
+    font-size: 20px;
+    color:rgb(33, 111, 139);
+}
+
+body{
+    background-color:rgb(255, 244, 254);
+}
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
