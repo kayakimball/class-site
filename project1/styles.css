@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 50px;
+    padding:20px 20px 10px 20px;
+}
+
+h2{
+    font-size: 48px;
+    margin: 0;
+}
+
+body{
+    background-color: #fffaeb;
+    color: #404244;
+}
+
+/* header */
+header{
+    text-align: center;
+    color: #00c3db;
+    background-color: #fffaeb;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.title{
+    color:#00c3db;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+li a{
+    color: #fc8500;
+    text-decoration: none;
+}
+
+
+/*welcome section*/
+#welcome{
+    background-color: #deefe6;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0 50px 0;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex-area{
+    /* display flex always goes on the parent */
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /*justify-content for centering horizontally flex boxes*/
+    align-items: center; /*align-items for vertically centering flex boxes */
+    background-color: #fffcf4;
+}
+
+.flex-column{
+    width:90%;
+    margin: 0 50px 0 30px;
+    font-size: 20px
+    
+}
+
+.saying{
+    color: #00c3db;
+    font-size: 57px;
+    margin: 150px 170px 20px 30px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.saying:hover{
+    transform: scale(1.15,1.15);
+    cursor: pointer;
+}
+
+.short-description{
+    margin: 0 170px 0 30px;
+    text-align: center;
+    line-height: 1.5;
+    color: #fc8500;
+    font-size: 19px;
+}
+
+.grey-bunny{
+    background-image: url(images/grey-bunny.webp);
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    padding: 0 0 0 400px;
+    margin: 200px 0 0 50px;
+    z-index: 10;
+    animation: movebunny 2s ease-out 0s 1 forwards;
+}
+
+@keyframes movebunny{
+    0%{transform: translateX(-300px)}
+    100%{ transform: translateX(0)}
+}
+
+.dog{
+     background-image: url(images/dog.webp);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    z-index: 10;
+    position: absolute;
+    bottom: -35px;
+    left: 280px;
+    animation: movedog 2s ease-out 0s 1 forwards;
+
+}
+
+@keyframes movedog{
+    0%{transform: translateX(-300px)}
+    100%{ transform: translateX(0)}
+}
+
+.sheep{
+    background-image: url(images/sheep.webp);
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    z-index: 9;
+    position: absolute;
+    bottom: -250px;
+    right: -70px;
+    animation: movesheep 2s ease-out 0s 1 forwards;
+}
+
+@keyframes movesheep{
+    0%{transform: translateX(300px)}
+    100%{ transform: translateX(0)}
+}
+
+/* about section */
+#about{ 
+    background-color: #fffaeb;
+    scroll-margin-top: 150px;
+    position: relative;
+}
+
+.about-header{
+    padding: 0 0 0 300px;
+    color: #00c3db;
+}
+
+.about-subheader{
+    margin: 20px 0 0 300px;
+    color: #fc8500;
+    font-size: 25px;
+}
+
+.about-description{
+    margin: 7px 0 0 300px;
+    font-size: 19px;
+}
+
+.jack{
+    background-image: url(images/JellyCat-2025-02-18T150215.902.webp);
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    margin: 30px 100px 0 0;
+    padding: 0 200px 0 0;
+}
+
+.jack:hover{
+    transform: scale(1.1) rotate(3deg);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hanging{
+    background-image: url(images/hanging.webp);
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    z-index: 8;
+    position: absolute;
+    left: -60px;
+    top: -37px;
+}
+
+/*video section*/
+#videos{
+    display: flex;
+    justify-content: center; 
+    padding: 50px 0 50px 0;
+    gap: 40px;
+    background-color: #fce9e2;
+    scroll-margin-top: 150px;
+}
+
+/* collections secion*/
+#popular-collections{
+    background-color: #deefe6;
+    padding: 50px 0 0 0;
+    scroll-margin-top: 150px;
+    color: #00c3db;
+}
+
+.collection-titles{
+    font-size: 22px;
+    background-color: #deefe6;
+    padding: 30px 0 0 30px;
+    color: #fc8500;
+}
+
+.collection-titles.spacing-effect b{
+    transition: letter-spacing 0.3s ease;
+}
+
+.collection-titles.spacing-effect:hover {
+  letter-spacing: 4px; 
+  cursor: pointer;
+}
+
+.collections{
+    margin: 0 0 30px 0;
+}
+
+/*bear section*/
+#bears{
+    background-color: #deefe6;
+}
+.flex-area-2{
+    /* display flex always goes on the parent */
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /*justify-content for centering horizontally flex boxes*/
+    align-items: center; /*align-items for vertically centering flex boxes */
+}
+
+.flex-column-2{
+    font-size: 27px;
+    color: #404244;
+    
+}
+
+.bare-bear{
+    background-image:url(images/bare-bear.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bare-bear:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.bathrobe-bear{
+    background-image:url(images/bathrobe-bear.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bathrobe-bear:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.heart-bear{
+    background-image:url(images/heart-bear.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.heart-bear:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.bee-bear{
+    background-image:url(images/bee-bear.webp);
+    height: 350px;
+    width: 350px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.bee-bear:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.spider-bear{
+    background-image:url(images/spider-bear.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.spider-bear:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+/*bunny section*/
+#bunnies{
+    background-color: #deefe6;
+}
+.flex-area-3{
+    /* display flex always goes on the parent */
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /*justify-content for centering horizontally flex boxes*/
+    align-items: center; /*align-items for vertically centering flex boxes */
+}
+
+.flex-column-3{
+   font-size: 27px;
+   color: #404244;
+    
+}
+
+.beige-bunny{
+    background-image: url(images/BASHFUL_BEIGE_BUNNY_3.webp);
+    height: 325px;
+    width: 325px;
+    background-size: cover;
+    background-position: center;
+    animation-delay: 0s;
+    animation: slidebunny 2.3s ease-out forwards;
+}
+
+.beige-bunny:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.floral-bunny{
+    background-image: url(images/floral-bunny.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    animation-delay: .2s;
+    animation: slidebunny 2.3s ease-out forwards;
+}
+
+.floral-bunny:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.blue-bunny{
+    background-image: url(images/blue-bunny.webp);
+    height: 325px;
+    width: 325px;
+    background-size: cover;
+    background-position: center;
+    animation-delay: .4s;
+    animation: slidebunny 2.3s ease-out forwards;
+}
+
+.blue-bunny:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.purple-bunny{
+    background-image: url(images/purple-bunny.png);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+    animation-delay: .6s;
+    animation: slidebunny 2.3s ease-out forwards;
+}
+
+.purple-bunny:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.cream-bunny{
+    background-image: url(images/cream-bunny.webp);
+    height: 325px;
+    width: 325px;
+    background-size: cover;
+    background-position: center;
+    animation-delay: .8s;
+    animation: slidebunny 2.3s ease-out forwards;
+}
+
+.cream-bunny:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+/*food section*/
+#food{
+    background-color: #deefe6;
+    padding: 0 0 50px 0;
+}
+.flex-area-4{
+    /* display flex always goes on the parent */
+    display:flex;
+    flex-direction: row;
+    justify-content: left; /*justify-content for centering horizontally flex boxes*/
+    align-items: center; /*align-items for vertically centering flex boxes */
+}
+
+.flex-column-4{
+   font-size: 27px;
+   color: #404244;
+    
+}
+
+.cake{
+    background-image:url(images/cake.png);
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cake:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.baguette{
+    background-image:url(images/baguette.png);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.baguette:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.hamburger{
+    background-image:url(images/hamburger.webp);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hamburger:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.coconut{
+    background-image:url(images/coconut.webp);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.coconut:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.cherry{
+    background-image:url(images/cherry.webp);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cherry:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.milkshake{
+    background-image:url(images/milkshake.webp);
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.milkshake:hover{
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+/* buy section */
+#buy{
+    background-color: #fffaeb;
+    scroll-margin-top: 200px;
+    position: relative;
+    margin: 50px 0 0 0;
+    padding: 0 0 50px 0;
+}
+
+.buy-now{
+    color: #00c3db;
+    margin: 0 0 0 30px;
+    padding: 0 0 0 0;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.boxes{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 70px auto;
+    max-width: 900px;
+}
+
+.buy-box{
+    background-color: #fce9e2;
+    padding: 20px;
+    border-radius: 16px;
+    width: 400px;
+    height: 260px;
+    text-align: center;
+    color: #fc8500;
+    font-size: 25px;
+}
+
+.buy-box p{
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    color: #404244;
+}
+
+.buy-button,.locator-button{
+    display: inline-block;
+    background: #00c3db;
+    color: #404244;
+    padding: 12px 20px;
+    margin: 40px 0 0 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform 0.15s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.buy-button:hover,.locator-button:hover{
+    background-color: #fc8500;
+    animation: wiggle 0.4s ease;
+}
+
+@keyframes wiggle{
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-3deg);}
+    50%{ transform: rotate(3deg);}
+    75% {transform: rotate (-2deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.buy-button:active,.locator-button:active{
+    transform: scale(0.92);
+}
+
+.dog2{
+    background-image:url(images/dog2.webp);
+    height: 260px;
+    width: 260px;
+    background-size: cover;
+    background-position: center;
+    z-index: 9;
+    position: absolute;
+    bottom: 30px;
+    left: 140px;
+}
+
+.dog2:hover{
+    animation: slide 0.6s infinite;
+    cursor: pointer;
+}
+
+@keyframes slide{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-10px);}
+    100%{transform: translateX(0);}
+}
+
+.peanut2{
+    background-image:url(images/peanut2.webp);
+    height: 130px;
+    width: 130px;
+    background-size: cover;
+    background-position: center;
+    z-index: 9;
+    position: absolute;
+    top: 34px;
+    right: 290px;
+}
+
+.peanut2:hover{
+    animation: float 0.6s infinite;
+    cursor: pointer;
+}
+
+@keyframes float{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+
+/* google fonts */
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bagel-fat-one {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
