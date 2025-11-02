@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #411a26;
+    color: white;
+}
+
+#title{
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+}
+
+h1{
+    font-size: 100px;
+    display: block;
+}
+
+h2{
+    margin: 10px;
+    font-size: 35px;
+    display: block;
+}
+
+#title h1 {
+  display: block;   /* stack vertically */
+  letter-spacing: 2px;
+  transition: letter-spacing 0.5s ease, transform 0.5s ease;
+}
+
+#title h1:hover {
+  letter-spacing: 8px;
+  transform: scaleX(1.1);
+}
+
+.flex-area{
+    /* display flex always goes on the parent */
+    display:flex;
+    flex-direction: row;
+    justify-content: center; /*justify-content for centering horizontally flex boxes*/
+    align-items: center; /*align-items for vertically centering flex boxes */
+    gap: 20px;
+    margin: 60px 0 0 0;
+    padding: 0 20px 0 20px;
+    text-align: center;
+}
+
+.flex-column{
+    width:50%;
+    
+}
+
+#reflection-pos{
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
+
+h5{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#pos-images, #neg-images{
+    margin: 20px;
+}
+
+.emoji{
+    background-image: url(images/IMG_3378.jpeg);
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    background-size: cover;
+}
+
+.nyc{
+    background-image: url(images/IMG_3381.jpeg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.computer{
+    background-image: url(images/IMG_3380.jpeg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.lamp{
+    background-image: url(images/Screenshot\ 2025-11-02\ at\ 11.35.27\ AM.png);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+}
+
+#title h2 {
+  text-align: center;
+  animation: spin 2s ease-out 1;
+  display: inline-block;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); opacity: 0; }
+  to { transform: rotate(360deg); opacity: 1; }
+}
+
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.josefin {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
