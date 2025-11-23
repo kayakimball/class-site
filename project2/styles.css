@@ -1,0 +1,663 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* INDEX.HTLM PAGE */
+/* welcome */
+#landing {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#landing::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image: url(images/Laputa\ Castle\ in\ the\ Sky_36.jpg);
+  background-size: cover;
+  background-position: top;
+  opacity: 0.7; 
+  z-index: 1; 
+}
+
+.cloud {  
+  position: absolute; 
+  top: 0;             
+  width: 130vw;       
+  height: auto;
+  object-fit: cover; 
+  opacity: 0.95; 
+  z-index: 3; 
+}
+
+.cloud-left {
+  top: -25%;               
+  right: 25%;
+  transform: translateX(0); 
+  animation: moveLeftCloud 5.3s ease-in-out forwards;
+}
+
+.cloud-right {
+  top: -25%;              
+  left: 25%;
+  transform: translateX(0); 
+  animation: moveRightCloud 5.3s ease-in-out forwards;
+}
+
+@keyframes moveLeftCloud {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes moveRightCloud {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+.intro-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInText 2s ease-in forwards;
+  animation-delay: 1.3s; 
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.intro-text h1 {
+  font-size: 60px;
+  color: #26387d;
+  margin-bottom: 25px;
+}
+
+.intro-text h2 {
+  color: #26387d;
+  font-size: 30px;
+}
+
+.floating-text {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* posters */
+#selection {
+  display: flex;                   
+  flex-direction: column;           
+  align-items: center;             
+  gap: 20px;                        
+  padding-top: 3%;                 
+  padding-bottom: 10%;             
+  text-align: center;
+  background-image: url(images/Spirited\ Away_43.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 150vh; 
+  position: relative;                  
+}
+
+.path-text h2 {
+  font-size: 50px;
+  color: #26387d;
+  margin: 0;
+}
+
+.poster-row {
+  display: flex;
+  flex-wrap: wrap;           
+  justify-content: center;   
+  gap: 20px;                
+  width: 100%;
+  margin: 2%;
+}
+
+/* Each poster */
+.posters {
+  width: 300px;              
+  height: 450px;            
+  overflow: hidden;         
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Images inside poster containers */
+.posters img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fill container without stretching */
+  transition: transform 0.3s ease;
+}
+
+.index-page .posters img:hover {
+    transform: scale(1.05);    /* subtle hover effect */
+}
+
+/* HOWL PAGE */
+.story-page{
+  background: #08243E;
+  background: linear-gradient(180deg, rgba(8, 36, 62, 1) 0%, rgba(14, 66, 89, 1) 50%);
+}
+
+.quote-text-howl {
+  position: absolute;   /* position relative to #heading-quote */
+  top: 20px;             /* vertical center */
+  left: 30px;            /* horizontal center */
+  z-index: 2;           /* above image */
+  color: white;         /* adjust for contrast */
+  text-align: left;
+  font-size: 45px;
+  max-width: 400px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  margin: 0;
+  overflow: hidden;
+}
+
+#movie-detail.howl{
+  display: flex;                  
+  align-items: flex-start;        
+  gap: 40px;                     
+  padding: 5% 10%;                
+  flex-wrap: wrap;                
+  color: white;
+  background-color: transparent;
+}
+
+/* Each Story Panel */
+.story-scene {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images Full-Width */
+.scene-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+/* Text Overlay */
+.scene-text-top {
+  position: absolute;
+  top: 6%;
+  right: 2%;
+  width: 35%;
+  text-align: right;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.scene-text-top-left {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  width: 35%;
+  text-align: left;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.scene-text-bottom {
+  position: absolute;
+  bottom: 6%;
+  right: 2%;
+  width: 35%;
+  text-align: right;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.story-scene.alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 2%;
+  color: white;
+}
+
+.side-img {
+  width: 45%;
+}
+
+/* Hover swap container */
+.swap {
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+}
+
+/* visible image */
+.swap .img-default {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.6s ease;
+  animation: shake 2s ease-in-out infinite; /* continuous subtle shake */
+}
+
+/* Hover image */
+.swap .img-hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  cursor: pointer;
+}
+
+.swap:hover .img-default {
+  opacity: 0;
+  animation: none; 
+}
+
+.swap:hover .img-hover {
+  opacity: 1;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+.side-text {
+  width: 15%;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Rumbling shake*/
+.rumble {
+  animation: rumble 1.3s ease-in-out infinite;
+}
+
+@keyframes rumble {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1.5px, -1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -0.5px); }
+  100% { transform: translate(0); }
+}
+
+/* TOTORO PAGE */
+#heading-quote {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image */
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  z-index: 1;    
+  max-width: 100%;
+  position: absolute;  
+  background-position: bottom;  
+  filter: brightness(75%);
+
+}
+
+/* Text on top */
+.quote-text-totoro {
+  position: absolute;   /* position relative to #heading-quote */
+  top: 30px;             /* vertical center */
+  right: 40px;            /* horizontal center */
+  z-index: 2;           /* above image */
+  color: white;         /* adjust for contrast */
+  text-align: right;
+  font-size: 45px;
+  max-width: 800px;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Poster container */
+#movie-detail .poster {
+  flex: 1 1 300px;               
+  max-width: 400px;   
+}
+
+#movie-detail .poster img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Movie info (title + summary) */
+#movie-detail .movie-info {
+  flex: 2 1 400px;              
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.movie-info h3{
+  font-size: 40px;
+  padding: 10px;
+}
+
+.movie-info h4{
+  font-size:20px;
+  padding: 0 0 5px 10px;
+}
+
+.movie-info p{
+  font-size: 25px;
+  padding: 10px;
+}
+
+.totoro-page{
+  background: #536b39;
+  background: linear-gradient(180deg, rgba(83, 107, 57, 1) 0%, rgba(232, 241, 236, 1) 100%);
+}
+
+#movie-detail.totoro{
+  display: flex;                  
+  align-items: flex-start;        
+  gap: 40px;                     
+  padding: 5% 10%;               
+  flex-wrap: wrap;                
+  color: #518367;
+  background-color: transparent;
+}
+
+.scene-text-bottom-left {
+  position: absolute;
+  bottom: 6%;
+  left: 2%;
+  width: 35%;
+  text-align: rigleftht;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.scene-text-centered {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;                        
+  transform: translateX(-50%);     
+  width: 60%;                     
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.story-scene.alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 2%;
+  color: white;
+}
+
+.side-img {
+  width: 45%;
+}
+
+/* Soft ambient fade */
+.fade-soft {
+  animation: softFade 15s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes softFade {
+  0%   { opacity: 1; }
+  40%  { opacity: 0.5; }
+  60%  { opacity: 1; }
+  80%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* CHOOSE PATHS */
+#end-paths {
+  width: 100%;
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;  
+  z-index: 5;
+}
+
+.path-icons {
+  display: flex;
+  gap: 80px;  /* space between icons */
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+  margin: 30px;
+}
+
+.icon-link-totoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #518367;
+  transition: transform 0.3s ease;
+  margin: 30px;
+}
+
+.icon-link img {
+  width: auto;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.icon-link-totoro img {
+  width: auto;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Floating animation */
+.float {
+  animation: floaty 3s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); } /* move up */
+  100% { transform: translateY(0px); }
+}
+
+.icon-link p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.icon-link-totoro p {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* JOURNEY ENDED PAGE */
+.intro-image-end {
+  position: absolute;   
+  top: 0;             
+  left: 0;
+  width: 100%;         
+  height: auto;       
+  max-height: 100%;    
+  object-fit: cover;   
+  object-position: top; 
+  z-index: 1;
+  filter: brightness(80%);
+}
+
+
+.quote-text-end {
+  position: absolute;
+  top: 4%;
+  left: 50%;                        
+  transform: translateX(-50%);     
+  width: 60%;                     
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.end-btn-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  z-index: 10;
+  margin: 30px;
+}
+
+.end-btn-img img {
+  width: auto;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.end-btn-img p {
+ font-size: 20px;
+ text-align: center;
+ color: white;
+}
+
+.end-btn-img {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+.end-btn-container {
+  position: absolute;
+  top: 10%;       
+  left: 5%;       
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 10;  
+}
+
+/* Individual buttons HOWL */
+.end-btn-page-howl-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-decoration: none;
+  color: white;
+  animation: floaty 5s ease-in-out infinite;
+  margin: 30px;
+  align-items: center;
+}
+
+.end-btn-page-howl-img img {
+  width: auto;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.end-btn-page-howl-img p {
+  font-size: 20px;
+  text-align: center;
+  color: #08243E;
+}
+
+/* individual buttons TOTORO */
+.end-btn-page-totoro-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-decoration: none;
+  color: white;
+  animation: floaty 5s ease-in-out infinite;
+  margin: 30px;
+  align-items: center;
+}
+
+.end-btn-page-totoro-img img {
+  width: auto;
+  height: 170px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.end-btn-page-totoro-img p {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+/* GOOGLE FONTS */
+.momo-trust {
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
