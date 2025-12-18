@@ -652,30 +652,8 @@ li a{
    RESPONSIVE STYLES
    ========================= */
 
-/* ---------- Tablets ---------- */
-  @media (max-width: 1024px) {
-
-#welcome {
-    height: 100vh;
- }
-
- #about{
-    margin: 20px;
-
- }
-
-.collections{
-    align-items: left;
-}
-
-.flex-area-4{
-    align-items: center;
-    justify-content: center;
-}
-  }
-
 /* ---------- Phones ---------- */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
  *:hover {
     transform: none !important;
@@ -705,7 +683,7 @@ li a{
     position: fixed;
     top: 0;
   }
-}
+
 
 #welcome .saying{
     font-size: 40px;
@@ -836,10 +814,14 @@ li a{
   .peanut2 {
     display: none;
   }
+}
 
 
 /* ---------- Small Phones ---------- */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+    #welcome{
+        width: 100vw;
+    }
 
   h1 { font-size: 32px; }
   h2 { font-size: 30px; }
