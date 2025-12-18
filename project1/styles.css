@@ -817,11 +817,176 @@ li a{
 }
 
 
+/* test */
+@media screen and (max-width: 1024px) {
+
+ *:hover {
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .collection-titles.spacing-effect:hover {
+    letter-spacing: normal;
+    cursor: default;
+  }
+
+  /* Stack welcome content */
+  #welcome {
+    flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    height: auto;
+    padding: 40px 0;
+    scroll-margin-top: 100px;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+  }
+
+
+#welcome .saying{
+    font-size: 40px;
+}
+
+  /* Keep text visible */
+  #welcome .flex-column {
+    order: -1;
+    text-align: center;
+  }
+
+  /* HIDE welcome images on mobile */
+  #welcome .grey-bunny,
+  #welcome .dog,
+  #welcome .sheep {
+    display: none;
+  }
+
+  /* Adjust text spacing for mobile */
+  .saying {
+    margin: 20px;
+    font-size: 38px;
+  }
+
+  .short-description {
+    margin: 0 20px;
+  }
+
+  /* About section */
+  #about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    scroll-margin-top: 140px;
+    margin-top: 40px;
+  }
+
+  #about .about-header{
+    font-size: 35px;
+  }
+
+  #about .about-subheader{
+    font-size: 22px;
+  }
+
+  #about .jack {
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .about-header,
+  .about-subheader,
+  .about-description {
+    margin: 20px;
+    padding: 0;
+  }
+
+  .hanging {
+    display: none;
+  }
+
+  /* Videos */
+  #videos {
+    flex-direction: column;
+     align-items: center;
+    gap: 20px;
+  }
+
+  iframe {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Collections */
+  #popular-collections{
+    scroll-margin-top: 120px;
+  }
+
+  #popular-collections .collections{
+    font-size: 35px;
+  }
+
+  #popular-collections .collection-titles{
+    font-size: 22px;
+  }
+
+  .flex-area-2,
+  .flex-area-3,
+  .flex-area-4 {
+    flex-wrap: wrap;
+  }
+
+  .flex-area-2 div,
+  .flex-area-3 div,
+  .flex-area-4 div {
+    width: 45%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Buy section */
+  #buy {
+    padding-top: 15px; /* offset for fixed header */
+    scroll-margin-top: 170px;
+    position: relative; /* ensure absolute children are contained */
+  }
+
+  /* Keep absolutely positioned children inside the section */
+  #buy .dog2,
+  #buy .peanut2 {
+    position: absolute;
+  }
+  
+  .boxes {
+    flex-direction: column;
+     align-items: center;
+    gap: 30px;
+  }
+
+  .buy-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .dog2,
+  .peanut2 {
+    display: none;
+  }
+}
+
 /* ---------- Small Phones ---------- */
 @media screen and (max-width: 480px) {
-    #welcome{
-        width: 100vw;
-    }
+ 
+  #welcome, #about, #videos, #popular-collections, #buy {
+    width: 100vw;
+    overflow-x: hidden;
+  }
 
   h1 { font-size: 32px; }
   h2 { font-size: 30px; }
