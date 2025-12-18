@@ -653,7 +653,9 @@ li a{
    ========================= */
 
 /* ---------- Tablets ---------- */
- #welcome {
+  @media (max-width: 1024px) {
+
+#welcome {
     height: 100vh;
  }
 
@@ -670,7 +672,7 @@ li a{
     align-items: center;
     justify-content: center;
 }
-
+  }
 
 /* ---------- Phones ---------- */
 @media (max-width: 768px) {
