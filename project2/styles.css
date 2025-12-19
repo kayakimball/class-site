@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* INDEX.HTLM PAGE */
 /* welcome */
 #landing {
   position: relative;
@@ -411,7 +410,7 @@
   bottom: 6%;
   left: 2%;
   width: 35%;
-  text-align: rigleftht;
+  text-align: left;
   font-size: 40px;
   line-height: 1.2;
   color: white;
@@ -562,7 +561,7 @@
 .end-btn-img {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   text-decoration: none;
@@ -607,6 +606,8 @@
   animation: floaty 5s ease-in-out infinite;
   margin: 30px;
   align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .end-btn-page-howl-img img {
@@ -614,6 +615,7 @@
   height: 170px;
   margin-bottom: 10px;
   border-radius: 12px;
+  display: block;
 }
 
 .end-btn-page-howl-img p {
@@ -621,6 +623,8 @@
   text-align: center;
   color: #08243E;
 }
+
+
 
 /* individual buttons TOTORO */
 .end-btn-page-totoro-img {
@@ -665,6 +669,7 @@
    RESPONSIVE STYLES
    ========================= */
 
+   /* tablet */
 @media screen and (max-width: 768px) {
   .cloud {  
   position: absolute; 
@@ -850,7 +855,7 @@ position: absolute;
   bottom: 6%;
   left: 2%;
   width: 35%;
-  text-align: rigleftht;
+  text-align: left;
   font-size: 40px;
   line-height: 1.2;
   color: white;
@@ -929,5 +934,310 @@ position: absolute;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
   z-index: 3;
+}
+}
+
+/* iphone */
+@media screen and (max-width: 480px) {
+  .cloud {  
+  position: absolute; 
+  top: 0;             
+  width: auto;       
+  height: 120vh;
+  object-fit: cover; 
+  opacity: 0.95; 
+  z-index: 3; 
+}
+  
+  .cloud-left {
+    top: -15%;  
+    right:-60%;
+    transform: translateX(0);
+    animation: moveLeftCloud 5.3s ease-in-out forwards;
+  }
+
+  .cloud-right {
+    top: -15%;     
+    left: -60%;
+    transform: translateX(0);
+    animation: moveRightCloud 5.3s ease-in-out forwards;
+  }
+
+.path-text{
+  padding: 30px;
+}
+
+.poster-row {
+  display: flex;
+  flex-direction: row;          
+  justify-content: center;   
+  gap: 20px;                
+  width: 100%;
+  margin-top: 10%;
+}
+
+
+#selection {
+  display: flex;                   
+  flex-direction: column;           
+  align-items: center;             
+  gap: 20px;                        
+  padding-top: 3%;                 
+  padding-bottom: 10%;             
+  text-align: center;
+  background-image: url(images/Spirited\ Away_43.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 130vh; 
+  position: relative;                  
+}
+
+.movie-info{
+  justify-content: center;
+  text-align: center;
+}
+
+/* HOWL PAGE */
+.story-page{
+  position: relative;
+  height: auto;       
+  overflow: hidden;  
+  }
+
+.quote-text-howl {
+  position: absolute;
+  left: 50%;
+  top: 650px;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  width: 90%;           
+  max-width: none;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  margin: 0;
+  overflow: hidden;
+}
+
+#movie-detail{
+  display: flex;                  
+  align-items: flex-start;        
+  gap: 40px;                     
+  padding: 5% 10%;                
+  flex-wrap: wrap;                
+  color: white;
+  background-color: transparent;
+  justify-content: center;
+}
+
+#howl-story .scene-img{
+  background-image: cover;
+  height: 100vh;
+}
+
+#howl-story .scene-text-top{
+  position: absolute;
+  top: 65%;
+  right: 2%;
+  width: 50%;
+  text-align: right;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+#howl-story .scene-text-bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;             
+  transform: translateX(-50%); 
+  width: 80%;            
+  text-align: center;        
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+/* totoro page */
+.quote-text-totoro{
+ position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  width: 90%;           
+  max-width: none;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  margin: 0;
+  overflow: hidden;
+}
+
+#totoro-story .scene-img{
+  background-image: cover;
+  height: 100vh;
+}
+
+#totoro-story .scene-text-top-left{
+   position: absolute;
+  top: 4%;
+  left: 4%;
+  width: 50%;
+  text-align: left;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+#totoro-story .scene-text-bottom{
+position: absolute;
+  bottom: 6%;
+  right: 2%;
+  width: 50%;
+  text-align: right;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+#totoro-story .scene-text-centered{
+  position: absolute;
+  bottom: 4%;
+  left: 50%;                        
+  transform: translateX(-50%);     
+  width: 75%;                     
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+#totoro-story .scene-text-bottom-left{
+  position: absolute;
+  bottom: 6%;
+  left: 2%;
+  width: 35%;
+  text-align: left;
+  font-size: 40px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+  font-size: 28px;
+}
+
+/* Each Story Panel */
+.story-scene {
+    height: auto;         
+    flex-direction: column;
+    padding: 10px 0;    
+  }
+
+  .scene-img {
+    height: auto;          
+    max-height: 80vh;    
+  }
+
+  .story-scene.alt {
+    flex-direction: column; /* stack side images vertically */
+    gap: 20px;
+  }
+
+  .side-img, .swap {
+    width: 90%;             /* fill most of mobile width */
+  }
+
+  .side-text {
+    width: 90%;
+    font-size: 32px;
+  }
+
+
+.end-btn-page-howl-img img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;     
+    border-radius: 12px;
+    display: block;
+    margin: 10px;
+  }
+
+.end-btn-page-howl-img{
+  margin: 20px 0 0 0;
+}
+
+.end-btn-page-totoro-img img {
+  width: auto;
+  height: 90px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.end-btn-container {
+  top: 58%;       
+  left: 50%;          
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;          
+  z-index: 10;  
+}
+
+#heading-quote .intro-image-end{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  }
+
+
+.quote-text-end {
+  position: absolute;
+  top: 4%;
+  left: 50%;                        
+  transform: translateX(-50%);     
+  width: 80%;                     
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.end-btn-img{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  z-index: 10;
+  width: 240px;
+  height: auto;
+}
+
+.end-btn-img img{
+  background-size: contain;
+   width: 240px;
+  height: auto;
 }
 }
