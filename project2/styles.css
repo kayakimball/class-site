@@ -915,7 +915,7 @@ position: absolute;
   height: 100vh;
   overflow: hidden;
   }
-}
+
 
 .quote-text-end {
   position: absolute;
@@ -929,4 +929,5 @@ position: absolute;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
   z-index: 3;
+}
 }
